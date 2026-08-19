@@ -1,0 +1,3146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Week Melbourne Airport</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&family=Noto+Sans:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #E8DFD0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 750px;
+    background: #F5EDE0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,0.15);
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .section { position: relative; z-index: 2; }
+
+  /* Top torn header area */
+  .header { padding: 60px 40px 50px; position: relative; }
+
+  .torn-frame {
+    position: relative;
+    background: #FBF6EC;
+    padding: 70px 50px 60px;
+    text-align: center;
+    clip-path: polygon(
+      0% 3%, 2% 0%, 5% 2%, 8% 0%, 12% 3%, 15% 1%, 18% 0%, 22% 2%, 25% 0%,
+      28% 1%, 32% 0%, 35% 2%, 38% 0%, 42% 1%, 45% 0%, 48% 2%, 52% 0%,
+      55% 1%, 58% 0%, 62% 2%, 65% 0%, 68% 1%, 72% 0%, 75% 2%, 78% 0%,
+      82% 1%, 85% 0%, 88% 2%, 92% 0%, 95% 1%, 98% 0%, 100% 3%,
+      99% 5%, 100% 8%, 98% 12%, 100% 15%, 99% 18%, 100% 22%, 98% 25%,
+      100% 28%, 99% 32%, 100% 35%, 98% 38%, 100% 42%, 99% 45%, 100% 48%,
+      98% 52%, 100% 55%, 99% 58%, 100% 62%, 98% 65%, 100% 68%, 99% 72%,
+      100% 75%, 98% 78%, 100% 82%, 99% 85%, 100% 88%, 98% 92%, 100% 95%,
+      99% 98%, 100% 100%, 97% 99%, 95% 100%, 92% 98%, 88% 100%, 85% 99%,
+      82% 100%, 78% 98%, 75% 100%, 72% 99%, 68% 100%, 65% 98%, 62% 100%,
+      58% 99%, 55% 100%, 52% 98%, 48% 100%, 45% 99%, 42% 100%, 38% 98%,
+      35% 100%, 32% 99%, 28% 100%, 25% 98%, 22% 100%, 18% 99%, 15% 100%,
+      12% 98%, 8% 100%, 5% 99%, 2% 100%, 0% 97%, 1% 95%, 0% 92%, 2% 88%,
+      0% 85%, 1% 82%, 0% 78%, 2% 75%, 0% 72%, 1% 68%, 0% 65%, 2% 62%,
+      0% 58%, 1% 55%, 0% 52%, 2% 48%, 0% 45%, 1% 42%, 0% 38%, 2% 35%,
+      0% 32%, 1% 28%, 0% 25%, 2% 22%, 0% 18%, 1% 15%, 0% 12%, 2% 8%, 0% 5%
+    );
+    filter: drop-shadow(2px 4px 8px rgba(92,64,51,0.15));
+  }
+
+  .torn-frame::after {
+    content: '';
+    position: absolute;
+    top: 15px; left: 15px; right: 15px; bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  .title-main {
+    margin-bottom: 16px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+  .title-main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .title-main .img-wide {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+  .title-main .img-normal {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .title-main .img-small {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .title-sub {
+    font-size: 26px;
+    color: #8B7355;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+  }
+
+  .rules-tag {
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #8B7355;
+    padding: 10px 40px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5C4033;
+    letter-spacing: 6px;
+  }
+
+  /* Prizes area */
+  .prizes { padding: 10px 50px 50px; }
+
+  .prize-card {
+    background: #FBF6EC;
+    border: 1.5px solid #D4C4A8;
+    border-radius: 6px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .prize-badge {
+    flex-shrink: 0;
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 700; color: #fff; text-align: center; line-height: 1.2;
+  }
+  .prize-badge.gold { background: linear-gradient(135deg, #D4A843, #B8860B); }
+  .prize-badge.silver { background: linear-gradient(135deg, #A8A8A8, #787878); }
+  .prize-badge.bronze { background: linear-gradient(135deg, #CD7F32, #8B5A2B); }
+
+  .prize-info { flex: 1; }
+  .prize-name { font-size: 20px; font-weight: 700; color: #3D2B1F; margin-bottom: 4px; line-height: 1.4; }
+  .prize-desc { font-size: 16px; color: #8B7355; line-height: 1.5; padding-right: 50px; }
+  .prize-count {
+    position: absolute; top: 20px; right: 24px;
+    font-size: 15px; color: #A09080; font-weight: 500;
+    background: #fff; border: 1px solid #D4C4A8;
+    border-radius: 50%; width: 56px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .prize-images { display: flex; gap: 10px; margin-top: 14px; }
+  .prize-img {
+    flex: 1; height: 90px; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: #fff; font-weight: 600; text-align: center; padding: 0 8px;
+  }
+
+  /* Stations */
+  .stations { padding: 30px 40px 60px; }
+  .station { margin-bottom: 50px; position: relative; }
+
+  .station-header {
+    display: flex; align-items: flex-start; gap: 16px;
+    margin-bottom: 18px; padding-left: 10px;
+  }
+
+  .pin-icon {
+    flex-shrink: 0; width: 48px; height: 56px; position: relative; margin-top: 4px;
+  }
+  .pin-icon::before {
+    content: ''; position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 36px; height: 36px; background: #D4452A;
+    border-radius: 50% 50% 50% 0;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  }
+  .pin-icon::after {
+    content: ''; position: absolute; top: 10px; left: 50%;
+    transform: translateX(-50%); width: 14px; height: 14px;
+    background: #FBF6EC; border-radius: 50%; z-index: 1;
+  }
+
+  .station-title-group { flex: 1; }
+  .station-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 32px; font-weight: 700; color: #8B4513;
+    line-height: 1.3; margin-bottom: 8px;
+  }
+  .station-tag {
+    display: inline-block; background: #F0D9A0; color: #8B6914;
+    font-size: 17px; font-weight: 600; padding: 6px 18px;
+    border-radius: 20px; letter-spacing: 1px;
+  }
+
+  .station-card {
+    background: #FBF6EC; border: 1.5px solid #E0D5C0;
+    border-radius: 10px; padding: 28px; position: relative;
+    box-shadow: 0 2px 12px rgba(92,64,51,0.08);
+  }
+
+  .station-card.torn-bottom::after {
+    content: ''; position: absolute; bottom: -8px; left: 0; right: 0; height: 16px;
+    background: #FBF6EC;
+    clip-path: polygon(
+      0% 0%, 3% 60%, 6% 20%, 9% 70%, 12% 30%, 15% 80%, 18% 40%,
+      21% 65%, 24% 25%, 27% 75%, 30% 35%, 33% 55%, 36% 15%, 39% 70%,
+      42% 40%, 45% 80%, 48% 30%, 51% 60%, 54% 20%, 57% 75%, 60% 45%,
+      63% 65%, 66% 25%, 69% 70%, 72% 35%, 75% 55%, 78% 20%, 81% 65%,
+      84% 40%, 87% 75%, 90% 30%, 93% 60%, 96% 25%, 100% 50%, 100% 100%, 0% 100%
+    );
+  }
+
+  .station-text { font-size: 18px; color: #5C4033; line-height: 1.8; margin-bottom: 18px; }
+
+  .station-images { display: flex; gap: 14px; }
+  .station-img {
+    flex: 1; height: 160px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 16px; font-weight: 600; text-align: center; padding: 0 10px;
+  }
+
+  .circle-torn-img {
+    width: 220px; height: 220px; border-radius: 50%;
+    margin: 10px auto; position: relative;
+    display: flex; align-items: center; justify-content: center;
+    clip-path: polygon(
+      50% 0%, 55% 2%, 60% 0%, 65% 3%, 70% 1%, 75% 4%, 80% 2%,
+      84% 5%, 88% 3%, 91% 6%, 94% 4%, 96% 7%, 98% 5%, 100% 8%,
+      99% 12%, 100% 15%, 98% 18%, 100% 22%, 99% 25%, 100% 28%,
+      98% 32%, 100% 35%, 99% 38%, 100% 42%, 98% 45%, 100% 48%,
+      99% 52%, 100% 55%, 98% 58%, 100% 62%, 99% 65%, 100% 68%,
+      98% 72%, 100% 75%, 99% 78%, 100% 82%, 98% 85%, 100% 88%,
+      99% 92%, 100% 95%, 98% 98%, 95% 100%, 92% 99%, 88% 100%,
+      85% 99%, 82% 100%, 78% 99%, 75% 100%, 72% 99%, 68% 100%,
+      65% 99%, 62% 100%, 58% 99%, 55% 100%, 52% 99%, 50% 100%,
+      48% 99%, 45% 100%, 42% 99%, 38% 100%, 35% 99%, 32% 100%,
+      28% 99%, 25% 100%, 22% 99%, 18% 100%, 15% 99%, 12% 100%,
+      8% 99%, 5% 100%, 2% 98%, 0% 95%, 1% 92%, 0% 88%, 2% 85%,
+      0% 82%, 1% 78%, 0% 75%, 2% 72%, 0% 68%, 1% 65%, 0% 62%,
+      2% 58%, 0% 55%, 1% 52%, 0% 48%, 2% 45%, 0% 42%, 1% 38%,
+      0% 35%, 2% 32%, 0% 28%, 1% 25%, 0% 22%, 2% 18%, 0% 15%,
+      1% 12%, 0% 8%, 2% 5%, 4% 7%, 6% 4%, 9% 6%, 12% 3%, 16% 5%,
+      20% 2%, 25% 4%, 30% 1%, 35% 3%, 40% 0%, 45% 2%
+    );
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 50px 60px;
+    border-top: 2px dashed #D4C4A8;
+    margin: 0 40px;
+  }
+  .footer-title {
+    display: inline-block; background: #3D2B1F; color: #F5EDE0;
+    font-size: 20px; font-weight: 700; padding: 8px 24px;
+    letter-spacing: 4px; margin-bottom: 24px;
+  }
+  .footer-list { list-style: none; padding: 0; }
+  .footer-list li {
+    font-size: 16px; color: #6B5B4E; line-height: 2;
+    padding-left: 20px; position: relative;
+  }
+  .footer-list li::before {
+    content: '·'; position: absolute; left: 5px;
+    color: #8B7355; font-weight: 700;
+  }
+  .lottery-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .rule-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #FBF6EC;
+    border: 1px solid #E8DFD0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    transition: box-shadow 0.2s;
+  }
+  .rule-card:hover {
+    box-shadow: 0 2px 8px rgba(92,64,51,0.1);
+  }
+  .rule-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .rule-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .rule-action {
+    font-size: 15px;
+    color: #5C4033;
+    font-weight: 500;
+  }
+  .rule-reward {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3D2B1F;
+    background: #F0D9A0;
+    padding: 5px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .rule-reward.highlight-tag {
+    background: #D4452A;
+    color: #fff;
+  }
+  .rule-reward .sub {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.9;
+  }
+  .airlines-station .station-header {
+    position: relative;
+    z-index: 3;
+  }
+  .airlines-outer {
+    display: flex;
+    padding: 0;
+    position: relative;
+  }
+  .airlines-text-zone {
+    flex: 1;
+    padding: 28px;
+    max-width: 60%;
+  }
+  .airlines-img-zone {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FBF6EC;
+  }
+  .airlines-img {
+    width: 200px;
+    height: auto;
+  }
+
+  /* Clickable station blocks */
+  .clickable-station {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .clickable-station:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(92,64,51,0.12);
+  }
+  .clickable-station:active {
+    transform: scale(0.99);
+  }
+
+  /* Subpage overlay */
+  .subpage-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .subpage-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Subpage slide-in from right */
+  .subpage {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 750px;
+    height: 100vh;
+    background: #F5EDE0;
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow-y: auto;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+  }
+  .subpage.active {
+    right: 0;
+  }
+
+  /* Subpage header */
+  .subpage-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: #FBF6EC;
+    border-bottom: 1px solid #E8DFD0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .subpage-back {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #8B4513;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .subpage-back:hover {
+    background: rgba(139,69,19,0.1);
+  }
+  .subpage-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-left: 12px;
+  }
+  .subpage-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #8B7355;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+
+  /* Subpage content area */
+  .subpage-content {
+    padding: 30px 20px;
+  }
+  .route-map-section {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 10px;
+    border: 1px solid #E0D5C0;
+  }
+
+  /* Promo Ticket Styles */
+  .promo-ticket {
+    background-color: #FFFDF9;
+    border: 1px solid #EADCC8;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #EADCC8;
+  }
+  .airline-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .airline-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+  .airline-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2C221C;
+  }
+  .ticket-tag {
+    background-color: #F5EBDD;
+    color: #7B4B2A;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .ticket-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .city-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .city-block.right {
+    align-items: flex-end;
+  }
+  .city-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C221C;
+  }
+  .route-middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .flight-line-icon {
+    font-size: 14px;
+    color: #7A6B5D;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .flight-line-icon::before,
+  .flight-line-icon::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px dashed #D9C3A9;
+    margin: 0 6px;
+  }
+  .flight-date {
+    font-size: 11px;
+    color: #8C6D53;
+    white-space: nowrap;
+  }
+  .ticket-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FDF9F3;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-top: 10px;
+  }
+  .price-box {
+    display: flex;
+    align-items: baseline;
+    color: #D9381E;
+  }
+  .currency {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 2px;
+  }
+  .price-num {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .price-suffix {
+    font-size: 11px;
+    margin-left: 3px;
+    color: #A68A72;
+  }
+  .grab-btn {
+    background-color: #7B4B2A;
+    color: #FFF;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .grab-btn:active {
+    background-color: #5A351D;
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(61, 43, 31, 0.9);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 2000;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  /* Shopping Subpage Styles */
+  .shopping-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #3D2B1F, #5C4033);
+    border-radius: 12px;
+    color: #F5EDE0;
+  }
+  .shopping-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .shopping-subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  .shopping-intro {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .shopping-intro p {
+    font-size: 14px;
+    color: #5C4033;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .shopping-section-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .category-card {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 14px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+  .category-card:hover {
+    background: #F5EDE0;
+    transform: translateY(-2px);
+  }
+  .category-card:active {
+    transform: scale(0.97);
+  }
+  .category-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .category-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5C4033;
+    line-height: 1.3;
+  }
+
+  .product-list {
+    margin-bottom: 20px;
+  }
+  .product-item {
+    display: flex;
+    align-items: center;
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    gap: 14px;
+  }
+  .product-img-placeholder {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #F0D9A0, #E8C880);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .product-info {
+    flex: 1;
+  }
+  .product-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3D2B1F;
+    margin-bottom: 4px;
+  }
+  .product-desc {
+    font-size: 12px;
+    color: #8B7355;
+  }
+  .product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #D4452A;
+  }
+
+  .online-booking-banner {
+    background: linear-gradient(135deg, #D4452A, #B8860B);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .booking-info {
+    flex: 1;
+  }
+  .booking-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .booking-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+  }
+  .booking-btn {
+    background: #fff;
+    color: #D4452A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* Store Location Card */
+  .store-location-card {
+    background: #FFFDF9;
+    border: 1px solid #EADCC8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .store-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+  .store-image-wrapper img {
+    width: calc(100% + 2px);
+    height: 100%;
+    object-fit: cover;
+  }
+  .store-address {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #6C5B4C;
+    font-weight: 500;
+  }
+  .location-icon {
+    width: 16px;
+    height: 16px;
+    fill: #C19E70;
+    flex-shrink: 0;
+    margin-right: 6px;
+  }
+
+  .promo-highlight-box {
+    background: linear-gradient(135deg, #3D2B1F, #5C4033);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .promo-main-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #F5EDE0;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .promo-sub-text {
+    font-size: 15px;
+    color: rgba(245, 237, 224, 0.85);
+    line-height: 1.5;
+  }
+  .highlight-laneway {
+    color: #F0D9A0;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  /* Product Card Styles */
+  .product-card {
+    position: relative;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.05));
+  }
+  .card-tab {
+    position: relative;
+    width: 55%;
+    height: 44px;
+    background-color: #F3ECE1;
+    border-top-left-radius: 12px;
+    z-index: 1;
+  }
+  .card-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -18px;
+    width: 30px;
+    height: 100%;
+    background-color: #F3ECE1;
+    transform-origin: bottom left;
+    transform: skewX(35deg);
+    border-top-right-radius: 8px;
+  }
+  .tab-badge {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #C19E70;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 14px;
+    letter-spacing: 1px;
+    z-index: 2;
+  }
+  .card-body {
+    background-color: #F3ECE1;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 2;
+  }
+  .product-image-wrapper {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #FFF;
+  }
+  .product-image-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .info-wrapper {
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 8px;
+  }
+  .product-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .highlight-name {
+    color: #5C6F8E;
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+  }
+  .product-price {
+    font-size: 14px;
+    color: #8C8C8C;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+
+  /* Horizontal Scroll Products */
+  .products-scroll-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #d4c4b0 #f5ede0;
+  }
+  .products-scroll-container::-webkit-scrollbar {
+    height: 6px;
+  }
+  .products-scroll-container::-webkit-scrollbar-track {
+    background: #fdfbf7;
+    border-radius: 3px;
+  }
+  .products-scroll-container::-webkit-scrollbar-thumb {
+    background: #d4c4b0;
+    border-radius: 3px;
+  }
+  .scroll-product-card {
+    flex: 0 0 280px;
+    background: #F3ECE1;
+    border-radius: 12px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.05));
+  }
+  .scroll-product-img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    padding-top: 10px;
+  }
+  .scroll-product-info {
+    padding: 12px;
+    text-align: center;
+  }
+  .scroll-product-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+  }
+  .scroll-product-brand {
+    font-size: 11px;
+    color: #5C6F8E;
+    margin-bottom: 6px;
+  }
+  .scroll-product-price {
+    font-size: 14px;
+    color: #D4452A;
+    font-weight: 700;
+  }
+
+  .best-sellers-title {
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 16px;
+    margin-top: 10px;
+  }
+
+  /* Laneway Section Styles */
+  .laneway-card-box {
+    width: 100%;
+    border: 2px dashed #bfa590;
+    border-radius: 12px;
+    padding: 20px 16px;
+    margin-bottom: 24px;
+    background-color: #fdfbf7;
+    text-align: center;
+  }
+  .laneway-card-box h2 {
+    font-size: 28px;
+    color: #6b523f;
+    margin-bottom: 12px;
+  }
+  .laneway-banner-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #e0d0c2;
+  }
+  .laneway-card-box p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6b523f;
+    text-align: justify;
+  }
+  .laneway-section-title {
+    font-size: 26px;
+    color: #8c6a50;
+    font-weight: bold;
+    margin: 8px 0;
+    text-align: center;
+  }
+  .laneway-features-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .laneway-feature-btn {
+    border: 2px solid #bfa590;
+    border-radius: 6px;
+    padding: 10px 6px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5c4a3d;
+    background-color: #fdfbf7;
+  }
+  .laneway-advantages-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 0 8px;
+  }
+  .laneway-advantage-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #5c4a3d;
+    font-weight: 500;
+  }
+  .laneway-advantage-item span {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .laneway-guides-section {
+    width: 100%;
+    position: relative;
+    padding-left: 24px;
+  }
+  .laneway-guides-section::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 30%;
+    width: 2px;
+    background-color: #bfa590;
+  }
+  .laneway-guide-step {
+    position: relative;
+    margin-bottom: 28px;
+  }
+  .laneway-guide-step::before {
+    content: '';
+    position: absolute;
+    left: -21px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #8c6a50;
+    background-color: #fcf9f5;
+    border-radius: 50%;
+  }
+  .laneway-guide-step h4 {
+    font-size: 20px;
+    color: #8c6a50;
+    margin-bottom: 8px;
+  }
+  .laneway-guide-step p, .laneway-guide-step li {
+    font-size: 16px;
+    color: #5c4a3d;
+    line-height: 1.6;
+  }
+  .laneway-guide-step ul {
+    padding-left: 20px;
+    margin-top: 6px;
+  }
+  .laneway-link-text {
+    color: #6b523f;
+    font-size: 15px;
+    word-break: break-all;
+  }
+  .laneway-pickup-box {
+    border: 1px solid #bfa590;
+    border-radius: 4px;
+    margin-top: 12px;
+    background-color: #fdfbf7;
+    overflow: hidden;
+  }
+  .laneway-pickup-header {
+    background-color: #b9987c;
+    color: white;
+    font-size: 15px;
+    padding: 6px 10px;
+    display: inline-block;
+    border-bottom-right-radius: 4px;
+  }
+  .laneway-pickup-content {
+    padding: 10px;
+    font-size: 15px;
+    color: #5c4a3d;
+  }
+
+  /* Station 2 OZLOOK & ACMI Styles */
+  .ozlook-hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .ozlook-hero-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .ozlook-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+  }
+  .ozlook-hero-text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .ozlook-intro {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .ozlook-intro p {
+    font-size: 14px;
+    color: #5C4033;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .ozlook-section {
+    margin-bottom: 24px;
+  }
+  .ozlook-section-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .ozlook-content {
+    display: flex;
+    gap: 16px;
+  }
+  .ozlook-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ozlook-img-main {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .ozlook-img-thumb {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .ozlook-desc {
+    flex: 1;
+  }
+  .ozlook-desc p {
+    font-size: 13px;
+    color: #5C4033;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .ozlook-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .ozlook-feature-item {
+    background: #F5EDE0;
+    border: 1px solid #E0D5C0;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 12px;
+    color: #5C4033;
+    text-align: center;
+  }
+
+  /* Product Card - Torn Paper Style */
+  .product-card {
+    width: 100%;
+    position: relative;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.05));
+    margin-bottom: 24px;
+  }
+  .card-tab {
+    position: relative;
+    width: 55%;
+    height: 44px;
+    background-color: #F3ECE1;
+    border-top-left-radius: 12px;
+    z-index: 1;
+  }
+  .card-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -18px;
+    width: 30px;
+    height: 100%;
+    background-color: #F3ECE1;
+    transform-origin: bottom left;
+    transform: skewX(35deg);
+    border-top-right-radius: 8px;
+  }
+  .card-body {
+    background-color: #F3ECE1;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px;
+    margin-top: -1px;
+    position: relative;
+    z-index: 2;
+  }
+  .image-wrapper {
+    width: 100%;
+    height: 320px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #F9F6F0;
+    position: relative;
+  }
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .info-wrapper {
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 6px;
+  }
+  .product-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-bottom: 6px;
+  }
+  .product-desc {
+    font-size: 12px;
+    color: #8C6D53;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .product-tag {
+    display: inline-block;
+    background-color: #7B4B2A;
+    color: #FFF;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .ozlook-hero-full {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .ozlook-hero-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ozlook-transition-card {
+    border: 1.5px dashed #C8A45C;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    background: #FDF9F3;
+    text-align: center;
+  }
+  .ozlook-transition-card .transition-attraction {
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .ozlook-transition-card .transition-desc {
+    font-size: 14px;
+    color: #5C4033;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .ozlook-transition-card .transition-hint {
+    font-size: 12px;
+    color: #C19E70;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .ozlook-transition-card .transition-arrow {
+    font-size: 18px;
+    color: #C19E70;
+    margin-bottom: 6px;
+  }
+
+  .ozlook-counter-card {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .ozlook-counter-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .ozlook-counter-info {
+    padding: 16px;
+    text-align: center;
+  }
+  .ozlook-counter-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 10px;
+  }
+  .ozlook-counter-desc {
+    font-size: 13px;
+    color: #5C4033;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .ozlook-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #6C5B4C;
+    border-top: 1px dashed #EADCC8;
+    padding-top: 10px;
+    font-weight: 500;
+  }
+  .ozlook-meta-row svg {
+    width: 14px;
+    height: 14px;
+    fill: #C19E70;
+    flex-shrink: 0;
+  }
+
+  .complete-read-btn {
+    background: linear-gradient(135deg, #D4452A, #B8860B);
+    color: #fff;
+    text-align: center;
+    padding: 16px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(212, 69, 42, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .complete-read-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 69, 42, 0.4);
+  }
+  .complete-read-btn:active {
+    transform: scale(0.98);
+  }
+  .subpage-card {
+    background: #FBF6EC;
+    border: 1.5px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .subpage-section-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 12px;
+  }
+  .subpage-text {
+    font-size: 15px;
+    color: #5C4033;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .subpage-images {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .subpage-images img {
+    flex: 1;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* Airline Subpage Styles */
+  .route-map-section {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .route-map-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 12px;
+  }
+  .route-map-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .golden-week-deal {
+    background: linear-gradient(135deg, #D4452A, #B8860B);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .deal-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .deal-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .deal-desc {
+    font-size: 13px;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+  .deal-cta {
+    display: inline-block;
+    background: #fff;
+    color: #D4452A;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+    text-decoration: none;
+  }
+
+  .airlines-section-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .airlines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .airline-card {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 10px;
+    padding: 14px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+  .airline-card:hover {
+    background: #F5EDE0;
+  }
+  .airline-card:active {
+    transform: scale(0.97);
+    background: #EDE3D5;
+  }
+  .airline-info {
+    flex: 1;
+    overflow: hidden;
+    padding-right: 8px;
+  }
+  .airline-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3D2B1F;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .airline-routes {
+    font-size: 11px;
+    color: #8B7355;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .airline-tail {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  /* Flight Detail Sub-subpage */
+  .flight-subpage {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 750px;
+    height: 100vh;
+    background: #F5EDE0;
+    z-index: 1001;
+    transition: right 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .flight-subpage.active {
+    right: 0;
+  }
+  .flight-subpage-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #FBF6EC;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+  .flight-back-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #8B4513;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  .flight-subpage-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-left: 10px;
+  }
+
+  .flight-list-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8B7355;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .flight-card {
+    background: #FBF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .flight-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .flight-airline-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #3D2B1F;
+  }
+  .flight-no-badge {
+    background: #F0D9A0;
+    border: 1px solid #D4C4A8;
+    color: #8B6914;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .flight-route-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flight-city-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .flight-city-col.right {
+    align-items: flex-end;
+  }
+  .city-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3D2B1F;
+  }
+  .city-timezone {
+    font-size: 10px;
+    color: #A09080;
+    margin-bottom: 2px;
+  }
+  .city-time {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3D2B1F;
+  }
+  .flight-middle-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+  }
+  .flight-line {
+    width: 100%;
+    border-bottom: 1px dashed #D4C4A8;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .flight-line span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FBF6EC;
+    padding: 0 4px;
+    font-size: 11px;
+  }
+  .flight-freq {
+    font-size: 10px;
+    color: #8B7355;
+    white-space: nowrap;
+  }
+
+  .divider {
+    text-align: center; padding: 20px 0;
+    color: #C8A45C; font-size: 20px;
+    letter-spacing: 12px; opacity: 0.5;
+  }
+
+  .tape {
+    position: absolute; width: 80px; height: 28px;
+    background: rgba(212,164,92,0.35);
+    border: 1px solid rgba(212,164,92,0.2); z-index: 5;
+  }
+  .tape.top-left { top: -10px; left: 60px; transform: rotate(-8deg); }
+  .tape.top-right { top: -10px; right: 60px; transform: rotate(6deg); }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 顶部 Logo -->
+  <div style="text-align:center; padding:30px 0 10px;">
+    <img src="D:/微时云/黄金周活动/git/图片/墨尔本机场logo1.png" alt="Melbourne Airport Logo" style="max-width:200px; height:auto;">
+    <p style="font-size:12px; color:#8C7A6B; margin:8px 0 0 0; font-style:italic; letter-spacing:0.5px;">2026 Melbourne Airport Golden Week Campaign</p>
+  </div>
+
+  <!-- Top Header -->
+  <div class="section header" style="padding-top:30px;">
+    <div class="torn-frame">
+      <div class="tape top-left"></div>
+      <div class="tape top-right"></div>
+    <div class="title-main">
+      <!-- 三层标题 -->
+      <div style="text-align:center; padding:10px 0 20px;">
+        <!-- 主标题：最大 -->
+        <h1 style="font-family:'Noto Serif',serif; font-size:30px; font-weight:900; color:#3D2B1F; margin:0 0 10px 0; letter-spacing:1px; line-height:1.3;">
+          Take Flight & Just <span style="color:#D97706;">"Wing It"</span>:<br>Your Airport Adventure Awaits
+        </h1>
+        <!-- 副标题：中等 -->
+        <h2 style="font-family:'Noto Serif',serif; font-size:22px; font-weight:700; color:#8B4513; margin:0 0 10px 0; font-style:italic;">
+          Ready to "Wing It"?
+        </h2>
+        <!-- Tagline：小字 -->
+        <p style="font-size:13px; color:#8C7A6B; margin:0; font-style:italic; line-height:1.6;">
+          Spread your wings across 4 airport stations — because the best journeys are <span style="color:#D97706;">"winged"</span> along the way.
+        </p>
+      </div>
+      <div style="display:block; margin:0; line-height:0;">
+        <img src="D:/微时云/黄金周活动/git/图片/终版1.png" alt="Golden Week" style="max-width:100%; height:auto; display:block; margin:0;">
+        <img src="D:/微时云/黄金周活动/git/图片/终版2.png" alt="Golden Week" style="max-width:90%; height:auto; display:block; margin:0 auto;">
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Recommendation Section -->
+  <div style="padding: 0 40px 20px;">
+    <div style="background:#FFF8E7; border:1.5px solid #D4A843; border-radius:8px; padding:14px 16px;">
+      <div style="font-size:14px; color:#5C4033; line-height:1.7; font-style:italic;">
+        <strong>💡 Recommendation:</strong> While our 2025 campaign achieved solid organic reach with zero promotion expense, scaling our upcoming 2026 Golden Week campaign will require more active customer acquisition. We suggest allocating a small, targeted budget for <strong>RED (Xiaohongshu) <span style="color:#D4452A;">KOL collaborations</span> and <span style="color:#D4452A;">ad placements</span></strong>. This kind of social exposure will help us reach a wider audience beyond our current base and drive more high-intent traffic into the mini-program.
+      </div>
+    </div>
+  </div>
+
+  <!-- Prizes -->
+  <div class="section prizes" style="padding: 30px 50px 30px;">
+    <div style="text-align:center;margin-bottom:25px;">
+      <span style="display:inline-block;background:#3D2B1F;color:#F5EDE0;font-size:20px;font-weight:700;padding:8px 24px;letter-spacing:4px;">Suggested Prizes</span>
+    </div>
+
+    <div class="prize-card">
+      <div class="prize-badge gold">1st Prize</div>
+      <div class="prize-info">
+        <div class="prize-name">Lotte Duty Free E-Voucher</div>
+        <div class="prize-desc">Duty-free shopping voucher</div>
+        <div class="prize-images">
+          <img src="D:/微时云/黄金周活动/git/图片/乐天免税店图片.jpg" alt="Lotte Duty Free" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/乐天免税店图片.jpg" alt="Duty Free Shopping" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/乐天免税店图片.jpg" alt="Voucher" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+        </div>
+      </div>
+      <div class="prize-count">×2</div>
+    </div>
+
+    <div class="prize-card">
+      <div class="prize-badge silver">2nd Prize</div>
+      <div class="prize-info">
+        <div class="prize-name">Melbourne Attraction Tickets</div>
+        <div class="prize-desc">OZLOOK & ACMI Popular Attraction Passes</div>
+        <div class="prize-images">
+          <img src="D:/微时云/黄金周活动/git/图片/WELCOME CENTRE.png" alt="WELCOME CENTRE" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/ACMI.jpg" alt="Melbourne Attractions" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/企鹅岛.png" alt="Penguin Island" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+        </div>
+      </div>
+      <div class="prize-count">×10</div>
+    </div>
+
+    <div class="prize-card">
+      <div class="prize-badge bronze">3rd Prize</div>
+      <div class="prize-info">
+        <div class="prize-name">Specialty Coffee Gift Set & Souvenir</div>
+        <div class="prize-desc">Melbourne Specialty Coffee, Chocolate, Melbourne Local Souvenirs</div>
+        <div class="prize-images">
+          <img src="D:/微时云/黄金周活动/git/图片/dining.png" alt="Coffee" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/dining2.png" alt="Souvenirs" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/dining3.png" alt="Gifts" style="flex:1;height:90px;border-radius:4px;object-fit:cover;">
+        </div>
+      </div>
+      <div class="prize-count">×20</div>
+    </div>
+  </div>
+
+  <!-- Ready to Wing It 大标题 + 规则图片 -->
+  <div style="text-align:center; padding: 20px 20px 10px;">
+    <h2 style="font-family:'Noto Serif',serif; font-size:36px; font-weight:900; color:#5A4531; margin:0 0 8px 0; letter-spacing:2px;">
+      Ready to <span style="color:#D97706; font-style:italic; text-decoration:underline; text-decoration-style:wavy;">"Wing It"</span>?
+    </h2>
+    <p style="font-size:16px; color:#8C7A6B; margin:0 0 20px 0; font-style:italic; line-height:1.6;">Spread your wings across 4 airport stations<br>& unlock your golden rewards.</p>
+    <img src="D:/微时云/黄金周活动/git/图片/规则图片.png" alt="Rules" style="max-width:85%; border-radius:12px;">
+  </div>
+
+  <!-- Easy to Play Section -->
+  <div style="padding: 24px 40px; text-align:center;">
+    <!-- Section label -->
+    <div style="font-size:14px; color:#8B7355; letter-spacing:3px; margin-bottom:16px; font-weight:600;">HOW IT WORKS</div>
+
+    <!-- Main tagline -->
+    <h3 style="font-family:'Noto Serif',serif; font-size:34px; font-weight:900; color:#3D2B1F; margin:0 0 16px 0; line-height:1.3;">
+      Easy to play, <span style="color:#D4452A;">Effortless to Win!</span>
+    </h3>
+    <p style="font-size:18px; color:#5C4033; margin:0 0 24px 0; line-height:1.6; font-style:italic;">
+      Explore our stations with a simple click to unlock <strong>lottery entries</strong>.
+    </p>
+
+    <!-- Two sections -->
+    <div style="display:flex; gap:40px; justify-content:center; flex-wrap:wrap;">
+      <!-- For Users -->
+      <div style="flex:0 1 300px; text-align:left;">
+        <div style="font-family:'Noto Serif',serif; font-size:18px; font-weight:700; color:#8B4513; margin-bottom:8px; border-bottom:2px solid #D4A843; padding-bottom:6px;">FOR USERS</div>
+        <p style="font-size:17px; color:#5C4033; margin:0; line-height:1.7;">
+          Enjoy an <strong style="color:#D4452A;">effortless, fun way</strong> to win exciting rewards — no complicated steps, just click & win!
+        </p>
+      </div>
+      <!-- For Partners -->
+      <div style="flex:0 1 300px; text-align:left;">
+        <div style="font-family:'Noto Serif',serif; font-size:18px; font-weight:700; color:#8B4513; margin-bottom:8px; border-bottom:2px solid #D4A843; padding-bottom:6px;">FOR PARTNERS</div>
+        <p style="font-size:17px; color:#5C4033; margin:0; line-height:1.7;">
+          <strong style="color:#D4452A;">Maximize brand exposure</strong> while guiding travelers to deeply discover our airport services & partner offerings.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activity Rules -->
+  <div class="section footer" style="border-top: none;">
+    <div class="footer-title">Event Rules</div>
+    <ul class="footer-list">
+      <li>Event Period: September 24, 2026 - October 07, 2026</li>
+      <li>Event Format: Click on cards to complete reading and earn lottery entries</li>
+    </ul>
+    <div class="footer-title" style="margin-top: 20px;">Lottery Rules</div>
+    <div class="lottery-rules">
+      <div class="rule-card">
+        <div class="rule-icon">🚩</div>
+        <div class="rule-content">
+          <div class="rule-action">Read any partner card page</div>
+          <div class="rule-reward">+2 entries / card</div>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🚩</div>
+        <div class="rule-content">
+          <div class="rule-action">Complete and read all 4 partner cards</div>
+          <div class="rule-reward highlight-tag">+2 times <span class="sub">(Total 10 entries)</span></div>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🚩</div>
+        <div class="rule-content">
+          <div class="rule-action">Daily check-in and participation</div>
+          <div class="rule-reward">+2 times / day</div>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🚩</div>
+        <div class="rule-content">
+          <div class="rule-action">Share the event page to WeChat friends/groups</div>
+          <div class="rule-reward">+1 time / time</div>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🚩</div>
+        <div class="rule-content">
+          <div class="rule-action">Successfully invite a new user via exclusive link (No limit)</div>
+          <div class="rule-reward">+3 times / person</div>
+        </div>
+      </div>
+      <div class="rule-card">
+        <div class="rule-icon">🚩</div>
+        <div class="rule-content">
+          <div class="rule-action">Redeem using daily active or lottery points</div>
+          <div class="rule-reward">10 points = 1 entry</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- Stations -->
+  <div class="section stations">
+
+    <!-- Station 1: Airlines -->
+    <div class="station airlines-station clickable-station" onclick="openSubpage('station1')">
+      <div class="station-header">
+        <div class="pin-icon"></div>
+        <div class="station-title-group">
+          <div class="station-title">Station 1: Airlines</div>
+          <span class="station-tag">Click to Read +2 Lottery Entries</span>
+        </div>
+      </div>
+      <div class="station-card torn-bottom airlines-outer">
+        <div class="airlines-text-zone">
+          <div class="station-text" style="font-style: italic;">
+            Planning your trip or heading back home? Explore our premier airline partners for exclusive seasonal flight schedules, direct routes, and seamless connections between China and Melbourne to kick off your journey right.
+          </div>
+        </div>
+        <div class="airlines-img-zone">
+          <img src="D:/微时云/黄金周活动/git/图片/飞机.png" alt="Airlines" class="airlines-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Station 2: Attractions -->
+    <div class="station clickable-station" onclick="openSubpage('station2')">
+      <div class="station-header">
+        <div class="pin-icon"></div>
+        <div class="station-title-group">
+          <div class="station-title">Station 2: OZLOOK & ACMI</div>
+          <span class="station-tag">Click to Read +2 Lottery Entries</span>
+        </div>
+      </div>
+      <div class="station-card torn-bottom">
+        <div class="station-text" style="font-style: italic;">
+          Ready to experience Melbourne? Dive into the city's vibrant culture with ACMI's cutting-edge screen exhibits and get essential local visitor services, attraction tickets, and travel tips through OZLOOK.
+        </div>
+        <div class="station-images">
+          <img src="D:/微时云/黄金周活动/git/图片/WELCOME CENTRE.png" alt="WELCOME CENTRE" style="flex:1;height:160px;border-radius:8px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/ACMI.jpg" alt="ACMI" style="flex:1;height:160px;border-radius:8px;object-fit:cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Station 3: Shopping -->
+    <div class="station clickable-station" onclick="openSubpage('station3')">
+      <div class="station-header">
+        <div class="pin-icon"></div>
+        <div class="station-title-group">
+          <div class="station-title">Station 3: Lotte Duty Free</div>
+          <span class="station-tag">Click to Read +2 Lottery Entries</span>
+        </div>
+      </div>
+      <div class="station-card torn-bottom">
+        <div class="station-text" style="font-style: italic;">
+          Time to shop your favorites! Discover global luxury brands, premium skincare, and fine wines at Lotte Duty Free. Enjoy the ultimate convenience of online pre-ordering and airport pickup before you fly.
+        </div>
+        <div class="station-images">
+          <img src="D:/微时云/黄金周活动/git/图片/乐天免税店图片.jpg" alt="Lotte Duty Free" style="flex:1;height:160px;border-radius:8px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/laneway.png" alt="Laneway" style="flex:1;height:160px;border-radius:8px;object-fit:cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Station 4: Airport -->
+    <div class="station clickable-station" onclick="openSubpage('station4')">
+      <div class="station-header">
+        <div class="pin-icon"></div>
+        <div class="station-title-group">
+          <div class="station-title">Station 4: Melbourne Airport</div>
+          <span class="station-tag">Click to Read +2 Lottery Entries</span>
+        </div>
+      </div>
+      <div class="station-card torn-bottom">
+        <div class="station-text" style="font-style: italic;">
+          Your seamless gateway to Australia. Experience Melbourne Airport's world-class facilities, multilingual visitor support, and friendly terminal services designed to welcome and guide travelers every step of the way.
+        </div>
+        <div class="station-images">
+          <img src="D:/微时云/黄金周活动/git/图片/机场.png" alt="Melbourne Airport" style="flex:1;height:120px;border-radius:8px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/机场2.png" alt="Melbourne Airport" style="flex:1;height:120px;border-radius:8px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/机场3.png" alt="Melbourne Airport" style="flex:1;height:120px;border-radius:8px;object-fit:cover;">
+        </div>
+        <div class="station-text" style="font-style: italic; margin-top: 18px;">
+          Savor the flavors of Melbourne with a diverse range of dining options throughout the terminal, from quick bites to gourmet experiences.
+        </div>
+        <div class="station-images">
+          <img src="D:/微时云/黄金周活动/git/图片/dining.png" alt="Airport Dining" style="flex:1;height:90px;border-radius:8px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/dining2.png" alt="Airport Dining" style="flex:1;height:90px;border-radius:8px;object-fit:cover;">
+          <img src="D:/微时云/黄金周活动/git/图片/dining3.png" alt="Airport Dining" style="flex:1;height:90px;border-radius:8px;object-fit:cover;">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Draw Now Section -->
+  <div style="padding: 20px 40px 30px; text-align:center;">
+    <div style="font-family:'Noto Serif',serif; font-size:16px; font-weight:700; color:#8B4513; letter-spacing:2px; margin-bottom:20px;">🎁 FINAL STEP</div>
+
+    <!-- 旋转闪烁的宝箱 -->
+    <div id="treasureBox" style="position:relative; width:200px; height:200px; margin:0 auto 24px; cursor:pointer;" onclick="openBox()">
+      <!-- 光环特效 -->
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:220px; height:220px; border-radius:50%; background:radial-gradient(circle, rgba(255,215,0,0.4) 0%, transparent 70%); animation:pulse 2s ease-in-out infinite;"></div>
+      <!-- 宝箱主体 -->
+      <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+        <div style="font-size:120px; animation:bounce 1.5s ease-in-out infinite;">🎁</div>
+      </div>
+      <!-- 四周装饰元素 -->
+      <div style="position:absolute; top:5px; left:5px; font-size:28px; animation:spin 4s linear infinite;">✈️</div>
+      <div style="position:absolute; top:5px; right:5px; font-size:28px; animation:spin 4s linear infinite reverse;">☕</div>
+      <div style="position:absolute; bottom:5px; left:5px; font-size:28px; animation:spin 4s linear infinite;">🛍️</div>
+      <div style="position:absolute; bottom:5px; right:5px; font-size:28px; animation:spin 4s linear infinite reverse;">🎰</div>
+    </div>
+
+    <h3 id="prizeTitle" style="font-family:'Noto Serif',serif; font-size:24px; font-weight:900; color:#3D2B1F; margin:0 0 12px 0;">
+      Ready to Open Your Mystery Box?
+    </h3>
+    <p id="prizeDesc" style="font-size:14px; color:#8B7355; margin:0 0 24px 0; line-height:1.5;">
+      Complete all 4 stations to unlock your golden rewards!
+    </p>
+
+    <!-- 抽奖按钮 -->
+    <button id="drawBtn" onclick="openBox()" style="background:linear-gradient(135deg, #D4452A, #B8860B); color:#F5EDE0; font-size:18px; font-weight:700; padding:16px 48px; border:none; border-radius:30px; cursor:pointer; box-shadow:0 6px 20px rgba(212,69,42,0.4); transition:all 0.3s ease; margin-bottom:30px;">
+      🎰 Draw Now
+    </button>
+  </div>
+
+  <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%,-50%) scale(1); opacity:0.5; }
+      50% { transform: translate(-50%,-50%) scale(1.3); opacity:0.8; }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatUp {
+      0% { transform: translate(-50%,-50%) scale(1); opacity:1; }
+      100% { transform: translate(-50%,-150%) scale(1.5); opacity:0; }
+    }
+  </style>
+
+  <script>
+    function openBox() {
+      const btn = document.getElementById('drawBtn');
+      const box = document.getElementById('treasureBox');
+      // 清除之前飞出的小图标
+      document.querySelectorAll('.float-icon').forEach(el => el.remove());
+
+      if (box.classList.contains('opened')) {
+        // 重置状态
+        box.classList.remove('opened');
+        btn.innerHTML = "🎰 Try Again";
+        document.getElementById('prizeTitle').innerHTML = "Ready to Open Your Mystery Box?";
+        document.getElementById('prizeDesc').innerHTML = "Complete all 4 stations to unlock your golden rewards!";
+        return;
+      }
+      box.classList.add('opened');
+      btn.innerHTML = "🎉 Opening...";
+      btn.style.background = "linear-gradient(135deg, #D4A843, #B8860B)";
+      btn.style.marginBottom = "30px";
+      // 飞出效果
+      const icons = ['🎁', '✨', '🎊', '🏆'];
+      icons.forEach((icon, i) => {
+        const el = document.createElement('div');
+        el.className = 'float-icon';
+        el.textContent = icon;
+        el.style.cssText = `position:absolute; font-size:40px; top:50%; left:${30 + i*15}%; animation:floatUp 1s ease-out ${i*0.15}s forwards; pointer-events:none; z-index:10;`;
+        box.appendChild(el);
+      });
+      setTimeout(() => {
+        // 随机结果
+        const rand = Math.random();
+        if (rand < 0.33) {
+          // 33% 积分
+          document.getElementById('prizeTitle').innerHTML = "🎉 You Won!";
+          document.getElementById('prizeDesc').innerHTML = "+20 Points<br><span style='font-size:12px; color:#8B7355;'>Points can be redeemed for lottery entries or prizes</span>";
+        } else if (rand < 0.66) {
+          // 33% 奖品
+          document.getElementById('prizeTitle').innerHTML = "🎉 You Won!";
+          document.getElementById('prizeDesc').innerHTML = "Specialty Coffee Gift Set & Souvenir";
+        } else {
+          // 33% 鼓励
+          const encouragements = ['Better luck next time! 🍀', 'Keep exploring! ✨', 'Stay tuned for more! 🎁'];
+          const msg = encouragements[Math.floor(Math.random() * encouragements.length)];
+          document.getElementById('prizeTitle').innerHTML = "😊 Almost there!";
+          document.getElementById('prizeDesc').innerHTML = msg;
+        }
+        btn.innerHTML = "🎰 Try Again";
+      }, 1200);
+    }
+  </script>
+
+  <!-- Bottom Activity Explanation -->
+  <div class="section footer">
+    <div class="footer-title">Prize Redemption</div>
+    <ul class="footer-list">
+      <li>Submit your info (name, phone, email, address) in the mini-program before Oct 12, or prizes will be forfeited.</li>
+      <li>E-vouchers sent via email; physical prizes via postal mail.</li>
+    </ul>
+
+    <div class="footer-title" style="margin-top: 16px;">Event Information</div>
+    <ul class="footer-list">
+      <li>Ensure your registration info is accurate to receive prizes in time.</li>
+      <li>Need help? Submit feedback via the "My" section.</li>
+      <li>Melbourne Airport reserves the right to disqualify any suspicious or abnormal participation.</li>
+      <li>Final interpretation right belongs to Melbourne Airport.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Flight Detail Sub-subpage -->
+<div class="flight-subpage" id="flightSubpage">
+  <div class="flight-subpage-header">
+    <button class="flight-back-btn" onclick="closeFlightDetail()">←</button>
+    <span class="flight-subpage-title" id="flightSubpageTitle">Flight Details</span>
+  </div>
+  <div class="flight-list-title">📅 Flight Schedules</div>
+  <div id="flightListContainer"></div>
+</div>
+
+<!-- Subpage Overlay -->
+<div class="subpage-overlay" id="subpageOverlay" onclick="closeSubpage()"></div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Subpage -->
+<div class="subpage" id="subpage">
+  <div class="subpage-header">
+    <button class="subpage-back" onclick="closeSubpage()">←</button>
+    <span class="subpage-title" id="subpageTitle">Station Details</span>
+    <button class="subpage-close" onclick="closeSubpage()">×</button>
+  </div>
+  <div class="subpage-content" id="subpageContent">
+    <!-- Dynamic content will be inserted here -->
+  </div>
+</div>
+
+<script>
+const stationData = {
+  station1: {
+    title: 'Station 1: Airlines',
+    content: `
+      <div style="width: 85%; margin: 0 auto; padding: 0;">
+      <div class="airlines-section-title" style="margin-bottom: 16px;">🌟 Golden Week Special Offers</div>
+
+      <div class="promo-ticket" onclick="showToast('Redirecting to China Southern booking...')">
+        <div class="ticket-header">
+          <div class="airline-brand">
+            <img class="airline-logo" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="logo">
+            <span class="airline-name">China Southern</span>
+          </div>
+          <div class="ticket-tag">Golden Week Special</div>
+        </div>
+        <div class="ticket-route">
+          <div class="city-block">
+            <span class="city-name">Melbourne</span>
+          </div>
+          <div class="route-middle">
+            <div class="flight-line-icon">✈️</div>
+            <div class="flight-date">Direct: 2026-10-01</div>
+          </div>
+          <div class="city-block right">
+            <span class="city-name">Guangzhou</span>
+          </div>
+        </div>
+        <div class="ticket-footer">
+          <div class="price-box">
+            <span class="currency">¥</span>
+            <span class="price-num">2,880</span>
+            <span class="price-suffix">from</span>
+          </div>
+          <button class="grab-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="promo-ticket" onclick="showToast('Redirecting to China Eastern booking...')">
+        <div class="ticket-header">
+          <div class="airline-brand">
+            <img class="airline-logo" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="logo">
+            <span class="airline-name">China Eastern</span>
+          </div>
+          <div class="ticket-tag">Golden Week Special</div>
+        </div>
+        <div class="ticket-route">
+          <div class="city-block">
+            <span class="city-name">Melbourne</span>
+          </div>
+          <div class="route-middle">
+            <div class="flight-line-icon">✈️</div>
+            <div class="flight-date">Direct: 2026-10-02</div>
+          </div>
+          <div class="city-block right">
+            <span class="city-name">Shanghai</span>
+          </div>
+        </div>
+        <div class="ticket-footer">
+          <div class="price-box">
+            <span class="currency">¥</span>
+            <span class="price-num">3,120</span>
+            <span class="price-suffix">from</span>
+          </div>
+          <button class="grab-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="promo-ticket" onclick="showToast('Redirecting to Air China booking...')">
+        <div class="ticket-header">
+          <div class="airline-brand">
+            <img class="airline-logo" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="logo">
+            <span class="airline-name">Air China</span>
+          </div>
+          <div class="ticket-tag">Golden Week Special</div>
+        </div>
+        <div class="ticket-route">
+          <div class="city-block">
+            <span class="city-name">Melbourne</span>
+          </div>
+          <div class="route-middle">
+            <div class="flight-line-icon">✈️</div>
+            <div class="flight-date">Direct: 2026-10-03</div>
+          </div>
+          <div class="city-block right">
+            <span class="city-name">Beijing</span>
+          </div>
+        </div>
+        <div class="ticket-footer">
+          <div class="price-box">
+            <span class="currency">¥</span>
+            <span class="price-num">3,450</span>
+            <span class="price-suffix">from</span>
+          </div>
+          <button class="grab-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="promo-ticket" onclick="showToast('Redirecting to Cathay Pacific booking...')">
+        <div class="ticket-header">
+          <div class="airline-brand">
+            <img class="airline-logo" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="logo">
+            <span class="airline-name">Cathay Pacific</span>
+          </div>
+          <div class="ticket-tag">Golden Week Special</div>
+        </div>
+        <div class="ticket-route">
+          <div class="city-block">
+            <span class="city-name">Melbourne</span>
+          </div>
+          <div class="route-middle">
+            <div class="flight-line-icon">✈️</div>
+            <div class="flight-date">Via Hong Kong: 2026-10-04</div>
+          </div>
+          <div class="city-block right">
+            <span class="city-name">Hong Kong</span>
+          </div>
+        </div>
+        <div class="ticket-footer">
+          <div class="price-box">
+            <span class="currency">¥</span>
+            <span class="price-num">2,650</span>
+            <span class="price-suffix">from</span>
+          </div>
+          <button class="grab-btn">Book Now</button>
+        </div>
+      </div>
+
+      <div class="route-map-section">
+        <div class="route-map-title">China - Melbourne Route Map</div>
+        <img src="D:/微时云/黄金周活动/git/图片/地图1.png" alt="Route Map" style="width: 100%; height: 400px; object-fit: cover;">
+      </div>
+
+      <div class="airlines-section-title">✈️ Partner Airlines</div>
+      <div class="airlines-grid">
+        <div class="airline-card" onclick="openFlightDetail('Juneyao Air', [{from:'Melbourne', timeFrom:'11:25', tzFrom:'AEST', to:'Shanghai', timeTo:'19:15', tzTo:'BJT', freq:'Mon/Wed/Fri', no:'HO165'}])">
+          <div class="airline-info">
+            <div class="airline-name">Juneyao Air</div>
+            <div class="airline-routes">MEL ⇌ PVG</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Hainan Airlines', [{from:'Melbourne', timeFrom:'10:30', tzFrom:'AEST', to:'Haikou', timeTo:'17:40', tzTo:'BJT', freq:'Tue/Thu/Sat', no:'HU484'}])">
+          <div class="airline-info">
+            <div class="airline-name">Hainan Airlines</div>
+            <div class="airline-routes">MEL ⇌ HAK</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/海南航空 1.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Shenzhen Airlines', [{from:'Melbourne', timeFrom:'13:15', tzFrom:'AEST', to:'Shenzhen', timeTo:'20:25', tzTo:'BJT', freq:'Wed/Sat', no:'ZH908'}])">
+          <div class="airline-info">
+            <div class="airline-name">Shenzhen Airlines</div>
+            <div class="airline-routes">MEL ⇌ SZX</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/深圳航空logo 2.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Capital Airlines', [{from:'Melbourne', timeFrom:'11:00', tzFrom:'AEST', to:'Qingdao', timeTo:'19:30', tzTo:'BJT', freq:'Mon/Thu', no:'JD386'},{from:'Melbourne', timeFrom:'14:30', tzFrom:'AEST', to:'Hangzhou', timeTo:'22:10', tzTo:'BJT', freq:'Tue/Fri', no:'JD362'}])">
+          <div class="airline-info">
+            <div class="airline-name">Capital Airlines</div>
+            <div class="airline-routes">MEL ⇌ TAO / HGH</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/capital.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Air China', [{from:'Melbourne', timeFrom:'12:00', tzFrom:'AEST', to:'Beijing', timeTo:'20:30', tzTo:'BJT', freq:'Daily', no:'CA178'}])">
+          <div class="airline-info">
+            <div class="airline-name">Air China</div>
+            <div class="airline-routes">MEL ⇌ PEK</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/air china.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Cathay Pacific', [{from:'Melbourne', timeFrom:'14:25', tzFrom:'AEST', to:'Hong Kong', timeTo:'21:45', tzTo:'BJT', freq:'Daily', no:'CX104'},{from:'Hong Kong', timeFrom:'19:00', tzFrom:'BJT', to:'Melbourne', timeTo:'05:55', tzFrom:'AEST', freq:'Mon/Wed/Fri', no:'CX135'}])">
+          <div class="airline-info">
+            <div class="airline-name">Cathay Pacific</div>
+            <div class="airline-routes">MEL ⇌ HKG</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/国泰航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Sichuan Airlines', [{from:'Melbourne', timeFrom:'23:00', tzFrom:'AEST', to:'Chengdu', timeTo:'06:30+1', tzTo:'BJT', freq:'Tue/Fri/Sun', no:'3U3884'}])">
+          <div class="airline-info">
+            <div class="airline-name">Sichuan Airlines</div>
+            <div class="airline-routes">MEL ⇌ CTU</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/四川航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Xiamen Air', [{from:'Melbourne', timeFrom:'12:10', tzFrom:'AEST', to:'Xiamen', timeTo:'19:20', tzTo:'BJT', freq:'Mon/Thu/Sun', no:'MF804'}])">
+          <div class="airline-info">
+            <div class="airline-name">Xiamen Air</div>
+            <div class="airline-routes">MEL ⇌ XMN</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/厦门航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Hong Kong Airlines', [{from:'Melbourne', timeFrom:'09:00', tzFrom:'AEST', to:'Hong Kong', timeTo:'16:15', tzTo:'BJT', freq:'Tue/Fri/Sun', no:'HX732'}])">
+          <div class="airline-info">
+            <div class="airline-name">Hong Kong Airlines</div>
+            <div class="airline-routes">MEL ⇌ HKG</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/航司logo/香港航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('China Southern', [{from:'Melbourne', timeFrom:'10:00', tzFrom:'AEST', to:'Guangzhou', timeTo:'16:50', tzTo:'BJT', freq:'Daily', no:'CZ322'},{from:'Melbourne', timeFrom:'23:30', tzFrom:'AEST', to:'Guangzhou', timeTo:'06:20+1', tzTo:'BJT', freq:'Mon/Wed/Fri', no:'CZ344'}])">
+          <div class="airline-info">
+            <div class="airline-name">China Southern</div>
+            <div class="airline-routes">MEL ⇌ CAN</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('China Eastern', [{from:'Melbourne', timeFrom:'12:30', tzFrom:'AEST', to:'Nanjing', timeTo:'21:00', tzTo:'BJT', freq:'Tue/Sat', no:'MU738'},{from:'Melbourne', timeFrom:'22:15', tzFrom:'AEST', to:'Shanghai', timeTo:'06:10+1', tzTo:'BJT', freq:'Daily', no:'MU736'}])">
+          <div class="airline-info">
+            <div class="airline-name">China Eastern</div>
+            <div class="airline-routes">MEL ⇌ NKG / PVG</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="airline">
+        </div>
+        <div class="airline-card" onclick="openFlightDetail('Beijing Capital', [{from:'Melbourne', timeFrom:'10:45', tzFrom:'AEST', to:'Beijing', timeTo:'19:15', tzTo:'BJT', freq:'Wed/Sat/Sun', no:'JD480'}])">
+          <div class="airline-info">
+            <div class="airline-name">Beijing Capital</div>
+            <div class="airline-routes">MEL ⇌ PEK</div>
+          </div>
+          <img class="airline-tail" src="D:/微时云/黄金周活动/git/图片/深圳航空.png" alt="airline">
+        </div>
+      </div>
+
+      <div class="complete-read-btn" onclick="completeReadAndClose()">
+        ✓ Complete Reading & Claim +2 Lottery Entries
+      </div>
+      </div>
+    `
+  },
+  station2: {
+    title: 'Station 2: OZLOOK & ACMI',
+    content: `
+      <style>
+        .station2-container {
+          background-color: #F7F3EC;
+          padding: 16px 12px;
+          margin: -30px -20px;
+          min-height: 100%;
+        }
+
+        .station2-container .container {
+          width: 85%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          box-sizing: border-box;
+          padding: 0;
+        }
+
+        .pain-points-box {
+          background-color: #EDE4D8;
+          border-radius: 12px;
+          padding: 16px;
+          border: 1px dashed #D5C5B0;
+        }
+
+        .pain-title {
+          font-size: 17px;
+          color: #8C6D53;
+          font-weight: bold;
+          margin-bottom: 14px;
+          text-align: center;
+          letter-spacing: 0.5px;
+        }
+
+        .chat-cloud {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
+        }
+
+        .chat-tag {
+          background-color: #FFFDF9;
+          color: #5A4A3A;
+          font-size: 14px;
+          padding: 10px 14px;
+          border-radius: 18px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+          border: 1px solid #EADCC8;
+        }
+
+        .chat-tag.highlight {
+          background-color: #C19E70;
+          color: #FFFFFF;
+          border: none;
+        }
+
+        .emotion-quote {
+          text-align: center;
+          font-size: 15px;
+          font-weight: bold;
+          color: #7B4B2A;
+          margin-top: 14px;
+          padding-top: 12px;
+          border-top: 1px solid #E2D5C3;
+          line-height: 1.5;
+        }
+
+        .hero-banner {
+          position: relative;
+          width: 100%;
+          height: 480px;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .hero-banner .blurred-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 40%;
+          filter: blur(4px);
+          transform: scale(1.1);
+        }
+
+        .hero-banner .clear-fg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 75%;
+          height: 80%;
+          object-fit: cover;
+          object-position: center 40%;
+          clip-path: ellipse(70% 80% at 50% 50%);
+        }
+
+        .hero-banner img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 40%;
+        }
+
+        .hero-stamp {
+          position: absolute;
+          top: 14px;
+          left: 14px;
+          background-color: rgba(243, 236, 225, 0.9);
+          backdrop-filter: blur(4px);
+          padding: 8px 14px;
+          border-radius: 8px;
+          font-size: 13px;
+          font-weight: bold;
+          color: #7B4B2A;
+          letter-spacing: 0.5px;
+          border: 1px solid #EADCC8;
+        }
+
+        .product-card {
+          width: 100%;
+          position: relative;
+          filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.05));
+        }
+
+        .card-tab {
+          position: relative;
+          width: 65%;
+          height: 40px;
+          background-color: #F3ECE1;
+          border-top-left-radius: 12px;
+          z-index: 1;
+        }
+
+        .card-tab::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: -16px;
+          width: 26px;
+          height: 100%;
+          background-color: #F3ECE1;
+          transform-origin: bottom left;
+          transform: skewX(35deg);
+          border-top-right-radius: 6px;
+        }
+
+        .tab-badge {
+          position: absolute;
+          top: 9px;
+          left: 14px;
+          background-color: #C19E70;
+          color: #FFFFFF;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 6px 18px;
+          border-radius: 12px;
+          z-index: 2;
+        }
+
+        .card-body {
+          background-color: #F3ECE1;
+          border-top-right-radius: 12px;
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+          padding: 16px;
+          margin-top: -1px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .image-wrapper {
+          width: 100%;
+          height: 280px;
+          border-radius: 4px;
+          overflow: hidden;
+          background-color: #FFF;
+        }
+
+        .image-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .info-wrapper {
+          padding-top: 12px;
+          text-align: center;
+        }
+
+        .product-title {
+          font-size: 24px;
+          font-weight: bold;
+          color: #1A1A1A;
+          margin-bottom: 8px;
+        }
+
+        .product-desc {
+          font-size: 16px;
+          color: #8C6D53;
+          line-height: 1.6;
+          margin-bottom: 12px;
+        }
+
+        .meta-row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          font-size: 14px;
+          color: #6C5B4C;
+          border-top: 1px dashed #EADCC8;
+          padding-top: 10px;
+          font-weight: 500;
+        }
+
+        .meta-row svg {
+          width: 13px;
+          height: 13px;
+          fill: #C19E70;
+          flex-shrink: 0;
+        }
+
+        .ozlook-scroll-container {
+          display: flex;
+          gap: 12px;
+          overflow-x: scroll;
+          padding: 0 0 16px;
+          -webkit-overflow-scrolling: touch;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: thin;
+          scrollbar-color: #d4c4b0 #f5ede0;
+        }
+
+        .ozlook-scroll-container::-webkit-scrollbar {
+          height: 4px;
+        }
+
+        .ozlook-scroll-container::-webkit-scrollbar-track {
+          background: #fdfbf7;
+          border-radius: 2px;
+        }
+
+        .ozlook-scroll-container::-webkit-scrollbar-thumb {
+          background: #d4c4b0;
+          border-radius: 2px;
+        }
+
+        .ozlook-scroll-card {
+          flex: 0 0 auto;
+          scroll-snap-align: start;
+        }
+
+        .ozlook-scroll-card img {
+          height: 320px;
+          width: auto;
+          object-fit: contain;
+          border-radius: 8px;
+          display: block;
+        }
+      </style>
+
+      <div class="station2-container">
+        <div class="container">
+
+        <!-- 模块1：小红书风格的落地迷茫与干货共鸣 -->
+        <div class="pain-points-box">
+          <div class="pain-title">✈️ The First 30 Minutes After Landing at Melbourne Airport...</div>
+          <div class="chat-cloud">
+            <div class="chat-tag">Don't know who to ask? Language barrier?</div>
+            <div class="chat-tag">How to activate a phone card?</div>
+            <div class="chat-tag highlight">How to use eSIM?</div>
+            <div class="chat-tag">Where's the student gathering point?</div>
+            <div class="chat-tag">What if scammed or luggage lost?</div>
+            <div class="chat-tag highlight">Where to buy attraction tickets?</div>
+          </div>
+          <div class="emotion-quote">
+            "So happy to hear Chinese!" ❤️<br>
+            At Melbourne Airport T2, there's a Welcome Centre that speaks Chinese,<br>
+            making your first day abroad instantly reassuring.
+          </div>
+        </div>
+
+        <!-- 第一步：机场落地安顿 -->
+        <div style="background: linear-gradient(135deg, #3D2B1F, #5C4033); border-radius: 12px; padding: 14px 16px; text-align: center; margin-bottom: 10px;">
+          <div style="font-size: 20px; font-weight: bold; color: #F5EDE0; line-height: 1.4;">
+            STEP 1 · Airport Essentials
+          </div>
+          <div style="font-size: 12px; color: #F0D9A0; line-height: 1.4; margin-top: 6px;">
+            Settle your network, transport & pickup right at T2
+          </div>
+        </div>
+
+        <!-- OZLOOK 机场服务卡片 -->
+        <div class="product-card">
+          <div class="card-body">
+            <div class="image-wrapper">
+              <img src="D:/微时云/黄金周活动/git/图片/WELCOME CENTRE.png" alt="OZLOOK Welcome Centre">
+            </div>
+            <div class="info-wrapper">
+              <div class="product-title">OZLOOK WELCOME CENTRE</div>
+              <div class="product-desc">Chinese-language arrival services, phone card/eSIM, airport pickup guidance & all Melbourne top attractions in one stop.</div>
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Melbourne Airport T2 International Arrivals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 左右滑动：OZLOOK 场景图片 -->
+        <div class="ozlook-scroll-container">
+          <div class="ozlook-scroll-card">
+            <img src="D:/微时云/黄金周活动/git/图片/ozlook1.jpg" alt="OZLOOK Scene 1">
+          </div>
+          <div class="ozlook-scroll-card">
+            <img src="D:/微时云/黄金周活动/git/图片/ozlook3.jpg" alt="OZLOOK Scene 3">
+          </div>
+          <div class="ozlook-scroll-card">
+            <img src="D:/微时云/黄金周活动/git/图片/ozlook2.jpg" alt="OZLOOK Scene 2">
+          </div>
+        </div>
+
+        <!-- 第二步：从机场安顿到城市探索 -->
+        <div style="background: linear-gradient(135deg, #3D2B1F, #5C4033); border-radius: 12px; padding: 14px 16px; text-align: center; margin: 6px 0;">
+          <div style="font-size: 20px; font-weight: bold; color: #F5EDE0; line-height: 1.4;">
+            STEP 2 · City Discovery
+          </div>
+          <div style="font-size: 12px; color: #F0D9A0; line-height: 1.4; margin-top: 6px;">
+            With luggage sorted & network ready — time to explore Melbourne's urban heartbeat.
+          </div>
+          <div style="font-size: 12px; color: #F0D9A0; line-height: 1.4; margin-top: 6px;">
+            Available at OZLOOK Welcome Centre
+          </div>
+        </div>
+
+        <!-- 第三步：复古撕裂大图主视觉 -->
+        <div class="hero-banner">
+          <img class="blurred-bg" src="D:/微时云/黄金周活动/git/图片/蒸汽火车.png" alt="Blurred Background">
+          <img class="clear-fg" src="D:/微时云/黄金周活动/git/图片/蒸汽火车.png" alt="Clear Train">
+          <div class="hero-stamp">
+            <div style="font-size: 13px; font-weight: bold; color: #7B4B2A; margin-bottom: 4px;">Puffing Billy Steam Train</div>
+            <div style="font-size: 11px; color: #7B4B2A;">Available at OZLOOK Welcome Centre</div>
+          </div>
+        </div>
+
+        <!-- 第四步：从城市探索到 ACMI 文化地标 -->
+        <div style="background: linear-gradient(135deg, #3D2B1F, #5C4033); border-radius: 12px; padding: 14px 16px; text-align: center; margin: 6px 0;">
+          <div style="font-size: 20px; font-weight: bold; color: #F5EDE0; line-height: 1.4;">
+            STEP 3 · ACMI
+          </div>
+          <div style="font-size: 12px; color: #F0D9A0; line-height: 1.4; margin-top: 6px;">
+            Leave the airport rush — step into ACMI at Federation Square for an immersive journey through light & moving images.
+          </div>
+        </div>
+
+        <!-- ACMI 展馆卡片 -->
+        <div class="product-card">
+          <div class="card-body">
+            <div class="image-wrapper" style="height: 150px;">
+              <img src="D:/微时云/黄金周活动/git/图片/ACMI.png" alt="ACMI Exhibition">
+            </div>
+            <div class="info-wrapper">
+              <div class="product-title">ACMI - Australian Centre for the Moving Image</div>
+              <div class="product-desc">Digital art temple at Federation Square, immersive light & shadow experiences, discovering a century of cinematic wonders.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Badge -->
+        <div style="background: #F0D9A0; border: 2px solid #C19E70; border-radius: 12px; padding: 14px 20px; text-align: center; margin-top: -25px;">
+          <div style="font-size: 18px; font-weight: bold; color: #5C4033; margin-bottom: 6px;">✦ The Most Unique Experience ✦</div>
+          <div style="font-size: 13px; color: #7B4B2A;">Don't miss the exclusive lens view at ACMI</div>
+        </div>
+
+        <!-- Lens1 图片 -->
+        <div style="text-align: center; margin-top: 0;">
+          <img src="D:/微时云/黄金周活动/git/图片/lens1'.png" alt="Lens View" style="max-width: 100%; border-radius: 8px;">
+        </div>
+
+        <!-- Lens 图片 -->
+        <div style="text-align: center; margin-top: 0;">
+          <img src="D:/微时云/黄金周活动/git/图片/lens.png" alt="Lens" style="max-width: 100%; border-radius: 8px;">
+        </div>
+
+        <!-- 领取按钮 -->
+        <div class="complete-read-btn" onclick="completeReadAndClose()">
+          ✓ Complete Reading & Claim +2 Lottery Entries
+        </div>
+
+      </div>
+      </div>
+    `
+  },
+  station3: {
+    title: 'Station 3: Lotte Duty Free',
+    content: `
+      <div style="width: 85%; margin: 0 auto; padding: 0;">
+      <div class="online-booking-banner" style="margin-bottom: 20px;">
+        <div class="booking-info">
+          <div class="booking-title">🎉 Golden Week Exclusive Deals</div>
+          <div class="booking-desc">Up to 30% off selected luxury items. Pre-order now and pick up at Melbourne Airport!</div>
+        </div>
+      </div>
+
+      <div class="store-location-card">
+        <div class="store-image-wrapper">
+          <img src="D:/微时云/黄金周活动/git/图片/乐天免税店图片.jpg" alt="Lotte Duty Free Store">
+        </div>
+        <div class="store-address">
+          <svg class="location-icon" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>Melbourne Airport T2 International Departures</span>
+        </div>
+      </div>
+
+      <div class="best-sellers-title">⭐ Best Sellers</div>
+
+      <div class="products-scroll-container">
+        <div class="scroll-product-card">
+          <img src="D:/微时云/黄金周活动/git/图片/patron.png" alt="Patron Tequila" class="scroll-product-img">
+          <div class="scroll-product-info">
+            <div class="scroll-product-name">Patron Anejo Tequila</div>
+            <div class="scroll-product-brand">1L</div>
+            <div class="scroll-product-price">A$145</div>
+          </div>
+        </div>
+        <div class="scroll-product-card">
+          <img src="D:/微时云/黄金周活动/git/图片/skin.png" alt="Skin Caviar" class="scroll-product-img" style="width: 60%; height: 260px; object-fit: contain; display: block; margin: 40px auto 0;">
+          <div class="scroll-product-info">
+            <div class="scroll-product-name">Skin Caviar Luxe Cream</div>
+            <div class="scroll-product-brand">30ml</div>
+            <div class="scroll-product-price">A$489</div>
+          </div>
+        </div>
+        <div class="scroll-product-card">
+          <img src="D:/微时云/黄金周活动/git/图片/mac.png" alt="Mac Lipstick" class="scroll-product-img">
+          <div class="scroll-product-info">
+            <div class="scroll-product-name">Macximal Matte Lipstick</div>
+            <div class="scroll-product-brand">Honeylove 3.50G</div>
+            <div class="scroll-product-price">A$34</div>
+          </div>
+        </div>
+        <div class="scroll-product-card">
+          <img src="D:/微时云/黄金周活动/git/图片/prada.png" alt="Prada Perfume" class="scroll-product-img">
+          <div class="scroll-product-info">
+            <div class="scroll-product-name">Paradigm 香水</div>
+            <div class="scroll-product-brand">30ml</div>
+            <div class="scroll-product-price">A$99</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-highlight-box" style="margin-top: 50px;">
+        <div class="promo-main-text">Worried about not having enough time to shop while rushing for your flight?</div>
+        <div class="promo-sub-text">You can easily browse and pre-order your favorite items in advance through the online <span class="highlight-laneway">Laneway</span> duty-free mall.</div>
+      </div>
+
+      <img src="D:/微时云/黄金周活动/git/图片/laneway介绍.png" alt="Laneway Introduction" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+      <div class="laneway-section-title">Features</div>
+      <div class="laneway-features-grid">
+        <div class="laneway-feature-btn">Limited-Time Deals</div>
+        <div class="laneway-feature-btn">Curated Products</div>
+        <div class="laneway-feature-btn">Categories</div>
+        <div class="laneway-feature-btn">Featured Items</div>
+        <div class="laneway-feature-btn">Bundles</div>
+        <div class="laneway-feature-btn">Shopping Inspiration</div>
+      </div>
+
+      <div class="laneway-section-title">Advantages</div>
+      <div class="laneway-advantages-list">
+        <div class="laneway-advantage-item">
+          <span>📅</span> Easy Pre-order & Pickup: Book online and collect with ease
+        </div>
+        <div class="laneway-advantage-item">
+          <span>🛡️</span> Guaranteed authentic items at great prices
+        </div>
+        <div class="laneway-advantage-item">
+          <span>💼</span> Flexible Payments: Fast and smooth checkout experience.
+        </div>
+      </div>
+
+      <div class="laneway-section-title">Shopping Guides</div>
+      <div class="laneway-guides-section">
+        <div class="laneway-guide-step">
+          <h4>Pre-order & Pay Online</h4>
+          <p class="laneway-link-text">https://laneway.melbourneairport.com.au/</p>
+        </div>
+
+        <div class="laneway-guide-step">
+          <h4>Pickup Requirements</h4>
+          <ul>
+            <li>Hold a valid international flight ticket arriving at or departing from Melbourne Airport.</li>
+            <li>Place your order between 60 days and 24 hours before your flight.</li>
+            <li>Present your order confirmation and passport at pickup.</li>
+          </ul>
+        </div>
+
+        <div class="laneway-guide-step">
+          <h4>Airport Pickup</h4>
+          <div class="laneway-pickup-box">
+            <div class="laneway-pickup-header">Departing Passengers</div>
+            <div class="laneway-pickup-content">Collect at the duty-free shop after security check.</div>
+          </div>
+          <div class="laneway-pickup-box" style="margin-top: 10px;">
+            <div class="laneway-pickup-header">Arriving Passengers</div>
+            <div class="laneway-pickup-content">Collect near the baggage claim area after customs.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 领取按钮 -->
+      <div class="complete-read-btn" onclick="completeReadAndClose()">
+        ✓ Complete Reading & Claim +2 Lottery Entries
+      </div>
+      </div>
+    `
+  },
+    station4: {
+    title: 'Station 4: Melbourne Airport Explorer',
+    content: `
+      <div style="width: 85%; margin: 0 auto; padding: 0;">
+      <!-- 站点小标题栏 -->
+      <div style="background-color: #6C5B4C; color: #FFFDF9; padding: 14px 16px; border-radius: 12px; text-align: center; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div style="font-size: 18px; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 6px;">Station 4 · Melbourne Airport Explorer</div>
+        <div style="font-size: 12px; opacity: 0.9;">24/7 Operations & Seamless Airport Journey</div>
+      </div>
+
+      <!-- 板块 1：24小时无宵禁 -->
+      <div style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+          <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #D4452A, #B8860B); border-radius: 50%; animation: dotPulse 2s infinite; margin-right: 8px;"></span>
+          <span style="font-size: 18px; font-weight: bold; color: #3D2B1F; line-height: 1;">24/7 Non-Stop Operations</span>
+        </div>
+        <div style="text-align: center; margin-bottom: 14px;">
+          <span style="font-size: 13px; color: #5C4033; line-height: 1.5;">Australia's largest 24/7 airport — no matter when your flight lands, full services are ready to welcome you.</span>
+        </div>
+        <div style="background-color: #FAF6ED; border: 1px solid #EADCC8; border-radius: 12px; overflow: hidden;">
+          <img src="D:/微时云/黄金周活动/git/图片/Airport-in-depth.jpg" alt="24/7 Operations" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+        </div>
+      </div>
+
+      <!-- 板块 1b：一体化中转 -->
+      <div style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+          <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #D4452A, #B8860B); border-radius: 50%; animation: dotPulse 2s infinite; margin-right: 8px;"></span>
+          <span style="font-size: 18px; font-weight: bold; color: #3D2B1F; line-height: 1;">Seamless Terminal Transfers</span>
+        </div>
+        <div style="text-align: center; margin-bottom: 14px;">
+          <span style="font-size: 13px; color: #5C4033; line-height: 1.5;">Walk under one roof to all connections. No outdoor waiting — just follow the signs!</span>
+        </div>
+        <div style="background-color: #FAF6ED; border: 1px solid #EADCC8; border-radius: 12px; overflow: hidden;">
+          <img src="D:/微时云/黄金周活动/git/图片/未来规划.jpg" alt="Seamless Terminal Transfers" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+        </div>
+      </div>
+
+      <!-- 板块 2：租车与交通出行 -->
+      <div style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+          <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #D4452A, #B8860B); border-radius: 50%; animation: dotPulse 2s infinite; margin-right: 8px;"></span>
+          <span style="font-size: 18px; font-weight: bold; color: #3D2B1F; line-height: 1;">Car Rental & City Transport</span>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 45%; text-align: center;">
+            <img src="D:/微时云/黄金周活动/git/图片/租车.png" alt="Car Rental" style="width: 275px; height: 280px; object-fit: contain; border-radius: 16px 16px 0 0; display: block;">
+            <div style="width: 275px; background: #FBF6EC; border: 1.5px solid #E0D5C0; border-radius: 0 0 10px 10px; border-top: none; padding: 12px 0;">
+              <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-bottom: 4px;">Car Rental</div>
+              <div style="font-size: 10px; color: #8C6D53;">T2 International Arrivals · All Major Brands</div>
+            </div>
+          </div>
+          <div style="flex: 1; min-width: 45%; text-align: center;">
+            <img src="D:/微时云/黄金周活动/git/图片/SKYbus1.png" alt="SkyBus" style="width: 275px; height: 280px; object-fit: contain; border-radius: 16px 16px 0 0; display: block;">
+            <div style="width: 275px; background: #FBF6EC; border: 1.5px solid #E0D5C0; border-radius: 0 0 10px 10px; border-top: none; padding: 12px 0;">
+              <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-bottom: 4px;">SkyBus Airport Shuttle</div>
+              <div style="font-size: 10px; color: #8C6D53;">24/7 to CBD Southern Cross Station</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 板块 3：咖啡之都介绍 -->
+      <div style="margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 14px;">
+          <span style="width: 12px; height: 12px; background: linear-gradient(135deg, #D4452A, #B8860B); border-radius: 50%; animation: dotPulse 2s infinite; flex-shrink: 0;"></span>
+          <span style="font-size: 18px; font-weight: bold; color: #3D2B1F;">Melbourne: The Coffee Capital</span>
+        </div>
+        <div style="text-align: center;">
+          <span style="font-size: 13px; color: #5C4033; line-height: 1.6;">
+            Experience Melbourne's legendary coffee culture right at the airport
+          </span>
+        </div>
+      </div>
+
+      <!-- 板块 3：机场咖啡 - 滑动卡片 -->
+      <div style="background: #FBF6EC; border: 1.5px solid #E0D5C0; border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(92,64,51,0.06);">
+        <div style="text-align: center; margin-bottom: 12px;">
+          <span style="font-size: 14px; font-weight: bold; color: #3D2B1F;">First Flat White</span>
+        </div>
+        <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #d4c4b0 #f5ede0;">
+          <div style="flex: 0 0 45%; scroll-snap-align: start;">
+            <img src="D:/微时云/黄金周活动/git/图片/Icons Victoria.png" alt="Icons Victoria" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; display: block;">
+            <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-top: 8px; text-align: center;">Icons Victoria</div>
+            <div style="font-size: 10px; color: #8C6D53; text-align: center;">T2 Arrivals · 24/7</div>
+          </div>
+          <div style="flex: 0 0 45%; scroll-snap-align: start;">
+            <img src="D:/微时云/黄金周活动/git/图片/Amber State Taphouse & Kitchen.png" alt="Amber State Taphouse & Kitchen" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; display: block;">
+            <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-top: 8px; text-align: center;">Amber State Taphouse & Kitchen</div>
+            <div style="font-size: 10px; color: #8C6D53; text-align: center;">T2 Departures · 6AM-10PM</div>
+          </div>
+          <div style="flex: 0 0 45%; scroll-snap-align: start;">
+            <img src="D:/微时云/黄金周活动/git/图片/Icons Victoria.png" alt="Icons Victoria" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; display: block;">
+            <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-top: 8px; text-align: center;">Icons Victoria</div>
+            <div style="font-size: 10px; color: #8C6D53; text-align: center;">T2 Central · 5AM-11PM</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 板块 4：机场美食 - 滑动卡片 -->
+      <div style="background: #FBF6EC; border: 1.5px solid #E0D5C0; border-radius: 12px; padding: 16px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(92,64,51,0.06);">
+        <div style="text-align: center; margin-bottom: 12px;">
+          <span style="font-size: 14px; font-weight: bold; color: #3D2B1F;">Local Dining Favorites</span>
+        </div>
+        <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: #d4c4b0 #f5ede0;">
+          <div style="flex: 0 0 45%; scroll-snap-align: start;">
+            <img src="D:/微时云/黄金周活动/git/图片/dining.png" alt="Dining" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; display: block;">
+            <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-top: 8px; text-align: center;">AFL Kitchen & Bar</div>
+            <div style="font-size: 10px; color: #8C6D53; text-align: center;">T2 Airside · 6AM-9PM</div>
+          </div>
+          <div style="flex: 0 0 45%; scroll-snap-align: start;">
+            <img src="D:/微时云/黄金周活动/git/图片/dining2.png" alt="Dining" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; display: block;">
+            <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-top: 8px; text-align: center;">Biggie Smalls</div>
+            <div style="font-size: 10px; color: #8C6D53; text-align: center;">T2 Landside · 5:30AM-8:30PM</div>
+          </div>
+          <div style="flex: 0 0 45%; scroll-snap-align: start;">
+            <img src="D:/微时云/黄金周活动/git/图片/dining3.png" alt="Dining" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; display: block;">
+            <div style="font-size: 13px; font-weight: bold; color: #3D2B1F; margin-top: 8px; text-align: center;">Brunetti Classico</div>
+            <div style="font-size: 10px; color: #8C6D53; text-align: center;">T2 Core / Multi-Terminal · 24h Flexible</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 领取按钮 -->
+      <div class="complete-read-btn" onclick="completeReadAndClose()">
+        ✓ Complete Reading & Claim +2 Lottery Entries
+      </div>
+
+      <style>
+        @keyframes dotPulse {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.3); opacity: 0.7; }
+        }
+      </style>
+      </div>
+    `
+  }
+};
+
+
+function openSubpage(stationId) {
+  const subpage = document.getElementById('subpage');
+  const overlay = document.getElementById('subpageOverlay');
+  const title = document.getElementById('subpageTitle');
+  const content = document.getElementById('subpageContent');
+
+  if (stationData[stationId]) {
+    title.textContent = stationData[stationId].title;
+    content.innerHTML = stationData[stationId].content;
+  }
+
+  subpage.classList.add('active');
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSubpage() {
+  const subpage = document.getElementById('subpage');
+  const overlay = document.getElementById('subpageOverlay');
+  subpage.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+function completeReadAndClose() {
+  showToast('+2 Lottery Entries Claimed! 🎉');
+  setTimeout(() => {
+    closeSubpage();
+  }, 1500);
+}
+
+function openFlightDetail(airlineName, flights) {
+  const flightSubpage = document.getElementById('flightSubpage');
+  const flightTitle = document.getElementById('flightSubpageTitle');
+  const container = document.getElementById('flightListContainer');
+
+  flightTitle.textContent = airlineName;
+  container.innerHTML = '';
+
+  flights.forEach(f => {
+    const cardHTML = `
+      <div class="flight-card">
+        <div class="flight-card-top">
+          <div class="flight-airline-tag">
+            <span>✈️</span>
+            <span>${airlineName}</span>
+          </div>
+          <div class="flight-no-badge">${f.no}</div>
+        </div>
+        <div class="flight-route-row">
+          <div class="flight-city-col">
+            <span class="city-name">${f.from}</span>
+            <span class="city-timezone">${f.tzFrom}</span>
+            <span class="city-time">${f.timeFrom}</span>
+          </div>
+          <div class="flight-middle-col">
+            <div class="flight-line"><span>✈️</span></div>
+            <span class="flight-freq">${f.freq}</span>
+          </div>
+          <div class="flight-city-col right">
+            <span class="city-name">${f.to}</span>
+            <span class="city-timezone">${f.tzTo}</span>
+            <span class="city-time">${f.timeTo}</span>
+          </div>
+        </div>
+      </div>
+    `;
+    container.innerHTML += cardHTML;
+  });
+
+  flightSubpage.classList.add('active');
+}
+
+function closeFlightDetail() {
+  const flightSubpage = document.getElementById('flightSubpage');
+  flightSubpage.classList.remove('active');
+}
+</script>
+
+</body>
+</html>
